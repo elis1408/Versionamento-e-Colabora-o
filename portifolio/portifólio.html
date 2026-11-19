@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Portfólio</title>
+
+  <style>
+    /* CORES DO SITE: experimente trocar os valores abaixo. */
+    :root {
+      --fundo: #f3f6fb;
+      --cartao: #c187f7;
+      --texto: #1f2937;
+      --detalhe: #8b25eb;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--fundo);
+      color: var(--texto);
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    /* AJUSTE PARA A FOTO FICAR REDONDA E BEM ENQUADRADA */
+    .avatar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background-color: var(--detalhe);
+      border: 3px solid var(--detalhe);
+      overflow: hidden;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h1 { margin-bottom: 6px; }
+    h2 { margin-top: 0; }
+    .subtitulo { margin-top: 0; color: #64748b; }
+
+    section {
+      background-color: var(--cartao);
+      padding: 24px;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .habilidades span {
+      display: inline-block;
+      background-color: #dbeafe;
+      color: #740b9e;
+      padding: 6px 10px;
+      margin: 4px;
+      border-radius: 6px;
+    }
+
+    button {
+      background-color: var(--detalhe);
+      color: #ffffff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover { opacity: 0.85; }
+    a { color: var(--detalhe); }
+    footer { text-align: center; color: #64748b; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="avatar">
+        <img src="file:///C:/Users/elismar_rojas/Downloads/WA_1788722764446.jpeg" alt="Foto de Elismar">
+      </div>
+      <h1>Olá! Eu sou a Elismar</h1>
+      <p class="subtitulo">Estudante de Técnico em Informática para Internet</p>
+    </header>
+
+    <section>
+      <h2>Sobre mim</h2>
+      <p>Gosto de tecnologia e estou aprendendo a criar sites e sistemas para a internet para ter mais oportunidade de emprego.</p>
+    </section>
+
+    <section>
+      <h2>Minhas habilidades</h2>
+      <div class="habilidades">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Python</span>
+        <span>Portugol</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Meu primeiro projeto</h2>
+      <h3>Jogo simples de HTML</h3>
+      <p>Jogo que eu fiz em dupla de Miraculous para colocar em prática o que aprendi.</p>
+    </section>
+
+    <section>
+      <h2>Contato</h2>
+      <p>Meu GitHub: <a href="https://github.com/elis1408" target="_blank">Acessar perfil</a></p>
+      <button onclick="mostrarMensagem()">Clique para conhecer meu site</button>
+      <p id="mensagem"></p>
+    </section>
+
+    <footer>
+      <p>Feito por Elismar Angélica Carreño Rojas • 2026</p>
+    </footer>
+  </main>
+
+  <script>
+    function mostrarMensagem() {
+      document.getElementById("mensagem").textContent =
+        "Obrigado por visitar meu portfólio!";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio ✨ Elismar</title>
+  <!-- Fonte arredondada e moderna do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --texto: #3b2d54;
+      --texto-suave: #6b5b8c;
+      --roxo-neon: #a855f7;
+      --rosa-neon: #ec4899;
+      --ciano-pastel: #a5f3fc;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      /* Fundo com gradiente holográfico fofo */
+      background: linear-gradient(135deg, #f3e8ff 0%, #b26df3 50%, #f1acd3 100%);
+      background-attachment: fixed;
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 45px auto;
+      padding: 0 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    /* FOTO COM BRILHO FUTURISTA */
+    .avatar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 124px;
+      height: 124px;
+      border-radius: 50%;
+      padding: 4px;
+      background: linear-gradient(45deg, var(--roxo-neon), var(--rosa-neon), #38bdf8);
+      box-shadow: 0 0 25px rgba(168, 85, 247, 0.45);
+      transition: transform 0.3s ease;
+    }
+
+    .avatar:hover {
+      transform: scale(1.05) rotate(2deg);
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ffffff;
+    }
+
+    h1 {
+      margin: 14px 0 6px;
+      font-size: 2rem;
+      background: linear-gradient(90deg, #7e22ce, #db2777);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      color: #6b21a8;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h3 {
+      margin-bottom: 6px;
+      color: #9d174d;
+    }
+
+    .subtitulo {
+      display: inline-block;
+      margin-top: 4px;
+      padding: 6px 16px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      border-radius: 999px;
+      color: var(--texto-suave);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    /* CARTÕES ESTILO VIDRO FUTURISTA (GLASSMORPHISM) */
+    section {
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 26px;
+      margin-bottom: 20px;
+      border-radius: 24px;
+      border: 1.5px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 8px 32px rgba(139, 92, 246, 0.12);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    section:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 36px rgba(236, 72, 153, 0.18);
+    }
+
+    /* ETIQUETAS DE HABILIDADES EM FORMATO PÍLULA */
+    .habilidades {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .habilidades span {
+      background: linear-gradient(135deg, #f3e8ff, #fce7f3);
+      color: #7e22ce;
+      border: 1px solid rgba(168, 85, 247, 0.35);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(168, 85, 247, 0.1);
+      transition: all 0.2s ease;
+    }
+
+    .habilidades span:hover {
+      background: linear-gradient(135deg, var(--roxo-neon), var(--rosa-neon));
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+
+    /* BOTÃO FUTURISTA BRILHANTE */
+    button {
+      background: linear-gradient(90deg, var(--roxo-neon), var(--rosa-neon));
+      color: #ffffff;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(236, 72, 153, 0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5);
+    }
+
+    a {
+      color: #db2777;
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 2px dashed rgba(219, 39, 119, 0.4);
+    }
+
+    a:hover {
+      border-bottom-style: solid;
+    }
+
+    #mensagem {
+      margin-top: 12px;
+      font-weight: 700;
+      color: #7e22ce;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--texto-suave);
+      font-size: 14px;
+      margin-top: 30px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="avatar">
+        <img src="file:///C:/Users/elismar_rojas/Downloads/WA_1788722764446.jpeg" alt="Foto de Elismar">
+      </div>
+      <h1>Olá! Eu sou a Elismar ✨</h1>
+      <p class="subtitulo">🚀 Estudante de Técnico em Informática para Internet</p>
+    </header>
+
+    <section>
+      <h2>💖 Sobre mim</h2>
+      <p>Gosto de tecnologia e estou aprendendo a criar sites e sistemas para a internet para ter mais oportunidade de emprego.</p>
+    </section>
+
+    <section>
+      <h2>⚡ Minhas habilidades</h2>
+      <div class="habilidades">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Python</span>
+        <span>Portugol</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>🎮 Meu primeiro projeto</h2>
+      <h3>Jogo simples de HTML 🐞</h3>
+      <p>Jogo que eu fiz em dupla de Miraculous para colocar em prática o que aprendi.</p>
+    </section>
+
+    <section>
+      <h2>💌 Contato</h2>
+      <p>Meu GitHub: <a href="https://github.com/elis1408" target="_blank">Acessar perfil ✨</a></p>
+      <button onclick="mostrarMensagem()">Clique para conhecer meu site 🌸</button>
+      <p id="mensagem"></p>
+    </section>
+
+    <footer>
+      <p>Feito com 💜 por Elismar Angélica Carreño Rojas • 2026</p>
+    </footer>
+  </main>
+
+  <script>
+    function mostrarMensagem() {
+      document.getElementById("mensagem").textContent =
+        "✨ Obrigada por visitar meu portfólio! Bem-vindo(a) ao futuro! 🚀";
+    }
+  </script>
+</body>
+</html>
