@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio ✨ Elismar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --texto: #3b2d54;
+      --texto-suave: #6b5b8c;
+      --roxo-neon: #a855f7;
+      --rosa-neon: #ec4899;
+      --rosa-borda: #f472b6;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fdf2f8;
+      background-image: 
+        radial-gradient(circle at 15% 20%, rgba(244, 114, 182, 0.22) 0%, transparent 45%),
+        radial-gradient(circle at 85% 75%, rgba(168, 85, 247, 0.22) 0%, transparent 45%),
+        linear-gradient(135deg, #bf68f8 0%, #e7d1ff 50%, #f578ea 100%);
+      background-attachment: fixed;
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 45px auto;
+      padding: 0 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    /* FOTO COM ARO BRILHANTE */
+    .avatar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 124px;
+      height: 124px;
+      border-radius: 50%;
+      padding: 4px;
+      background: linear-gradient(45deg, var(--roxo-neon), var(--rosa-neon), #38bdf8);
+      box-shadow: 0 0 25px rgba(236, 72, 153, 0.45);
+      transition: transform 0.3s ease;
+    }
+
+    .avatar:hover {
+      transform: scale(1.05) rotate(2deg);
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ffffff;
+    }
+
+    h1 {
+      margin: 14px 0 6px;
+      font-size: 2rem;
+      background: linear-gradient(90deg, #7e22ce, #db2777);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      color: #831843;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h3 {
+      margin-bottom: 6px;
+      color: #9d174d;
+    }
+
+    .subtitulo {
+      display: inline-block;
+      margin-top: 4px;
+      padding: 6px 18px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 2px solid #f9a8d4;
+      border-radius: 999px;
+      color: var(--texto-suave);
+      font-weight: 600;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 12px rgba(244, 114, 182, 0.15);
+    }
+
+    /* CARTÃO FOFO COM BORDA EM ONDAS/NUVEM (100% COMPATÍVEL) */
+    section {
+      position: relative;
+      background: rgba(255, 255, 255, 0.92);
+      padding: 28px 32px;
+      margin-bottom: 28px;
+      border-radius: 36px;
+      /* Borda dupla fofa e brilhante */
+      border: 3px solid #f472b6;
+      outline: 4px dashed rgba(244, 114, 182, 0.45);
+      outline-offset: 4px;
+      box-shadow: 
+        0 10px 25px rgba(236, 72, 153, 0.15),
+        inset 0 0 18px rgba(244, 114, 182, 0.15);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    section:hover {
+      transform: translateY(-4px);
+      box-shadow: 
+        0 14px 30px rgba(168, 85, 247, 0.22),
+        inset 0 0 22px rgba(244, 114, 182, 0.22);
+    }
+
+    /* Detalhes brilhantes nos cantos */
+    .brilho-canto {
+      position: absolute;
+      top: 16px;
+      right: 24px;
+      font-size: 16px;
+      color: #ec4899;
+      pointer-events: none;
+    }
+
+    /* ETIQUETAS DE HABILIDADES */
+    .habilidades {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .habilidades span {
+      background: linear-gradient(135deg, #fdf2f8, #f3e8ff);
+      color: #9d174d;
+      border: 1.5px solid #f9a8d4;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+
+    .habilidades span:hover {
+      background: linear-gradient(135deg, var(--rosa-neon), var(--roxo-neon));
+      color: #ffffff;
+      border-color: transparent;
+      transform: scale(1.05);
+    }
+
+    /* BOTÃO FUTURISTA */
+    button {
+      background: linear-gradient(90deg, var(--rosa-neon), var(--roxo-neon));
+      color: #ffffff;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(236, 72, 153, 0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5);
+    }
+
+    a {
+      color: #db2777;
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 2px dashed #f472b6;
+    }
+
+    a:hover {
+      border-bottom-style: solid;
+    }
+
+    #mensagem {
+      margin-top: 12px;
+      font-weight: 700;
+      color: #831843;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--texto-suave);
+      font-size: 14px;
+      margin-top: 30px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="avatar">
+        <img src="file:///C:/Users/elismar_rojas/Downloads/WA_1788722764446.jpeg" alt="Foto de Elismar">
+      </div>
+      <h1>Olá! Eu sou a Elismar ✨</h1>
+      <p class="subtitulo">🌷 Estudante de Técnico em Informática para Internet 🚀</p>
+    </header>
+
+    <section>
+      <span class="brilho-canto">✦ ✧</span>
+      <h2>💖 Sobre mim</h2>
+      <p>Gosto de tecnologia e estou aprendendo a criar sites e sistemas para a internet para ter mais oportunidade de emprego.</p>
+    </section>
+
+    <section>
+      <span class="brilho-canto">✧ ✦</span>
+      <h2>⚡ Minhas habilidades</h2>
+      <div class="habilidades">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Python</span>
+        <span>Portugol</span>
+      </div>
+    </section>
+
+    <section>
+      <span class="brilho-canto">🦋 ✨</span>
+      <h2>🎮 Meu primeiro projeto</h2>
+      <h3>Jogo simples de HTML 🐞</h3>
+      <p>Jogo que eu fiz em dupla de Miraculous para colocar em prática o que aprendi.</p>
+    </section>
+
+    <section>
+      <span class="brilho-canto">✦ 🌸</span>
+      <h2>💌 Contato</h2>
+      <p>Meu GitHub: <a href="https://github.com/elis1408" target="_blank">Acessar perfil ✨</a></p>
+      <button onclick="mostrarMensagem()">Clique para conhecer meu site 🌸</button>
+      <p id="mensagem"></p>
+    </section>
+
+    <footer>
+      <p>Feito com 💜 por Elismar Angélica Carreño Rojas • 2026</p>
+    </footer>
+  </main>
+
+  <script>
+    function mostrarMensagem() {
+      document.getElementById("mensagem").textContent =
+        "✨ Obrigada por visitar meu portfólio! Bem-vindo(a) ao futuro! 🦋";
+    }
+  </script>
+</body>
+</html>
